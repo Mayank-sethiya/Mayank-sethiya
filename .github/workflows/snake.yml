@@ -1,4 +1,4 @@
-name: Generate Unique Snake
+name: Generate Snake Game
 
 on:
   schedule:
@@ -16,20 +16,16 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      # Generates the contribution animation with a custom Retrowave palette
       - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            # Output 1: A deep-space grid (used as fallback or for subtle themes)
-            dist/github-contribution-grid-snake.svg?color_snake=#00FFFF&color_dots=#0a0a23,#0e0e33,#1a1a5c,#2e2e7a,#4d4d99
-            # Output 2 (The Main One): The "Cyberdeck Glitch" palette
-            dist/cyber-snake.svg?color_snake=#ff00ff&color_dots=#120120,#390141,#56025d,#790382,#ff00ff
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Push the generated SVGs to the "output" branch
       - name: Push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
