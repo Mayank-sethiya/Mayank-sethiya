@@ -1,24 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="220" viewBox="0 0 850 220">
-  <rect width="850" height="220" fill="#0d1117" rx="10" />
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="100" viewBox="0 0 850 100">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <clipPath id="welcome-clip">
+      <rect x="250" y="0" width="0" height="100">
+        <animate attributeName="width" from="0" to="400" dur="1.5s" begin="0s" fill="freeze" />
+      </rect>
+    </clipPath>
+    
+    <clipPath id="name-clip">
+      <rect x="150" y="0" width="0" height="100">
+        <animate attributeName="width" from="0" to="550" dur="2s" begin="3.5s" fill="freeze" />
+      </rect>
+    </clipPath>
+  </defs>
 
-  <style>
-    .greeting { font: 600 24px 'Courier New', monospace; fill: #00ff00; }
-    .name { font: bold 52px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
-    .bio { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #8b949e; }
-    .highlight { fill: #00ff00; }
-    .neon-glow { filter: drop-shadow(0px 0px 5px rgba(0, 255, 0, 0.6)); }
-  </style>
+  <rect width="100%" height="100%" fill="#0d1117" rx="10" />
 
-  <circle cx="30" cy="30" r="7" fill="#ff5f56" />
-  <circle cx="55" cy="30" r="7" fill="#ffbd2e" />
-  <circle cx="80" cy="30" r="7" fill="#27c93f" />
+  <g font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#00ff00" filter="url(#glow)">
+    
+    <text x="30" y="55">&gt; INIT SYSTEM...</text>
 
-  <text x="30" y="90" class="greeting neon-glow">&gt; INIT SYSTEM... 👋 Welcome!</text>
-  <text x="28" y="150" class="name">I'm Mayank Sethiya</text>
-  
-  <text x="30" y="190" class="bio">
-    🎓 Computer Science Student 
-    <tspan class="highlight"> | </tspan> 💻 MERN Stack &amp; AI 
-    <tspan class="highlight"> | </tspan> 🚀 Building the Future
-  </text>
+    <g clip-path="url(#welcome-clip)">
+      <text x="425" y="55" text-anchor="middle">👋 Welcome!</text>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="3.5s" fill="freeze" />
+    </g>
+
+    <g clip-path="url(#name-clip)" opacity="0">
+      <text x="425" y="55" text-anchor="middle">I'm Mayank Sethiya</text>
+      <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.01;1" dur="3.5s" begin="3.49s" fill="freeze" />
+    </g>
+    
+  </g>
 </svg>
