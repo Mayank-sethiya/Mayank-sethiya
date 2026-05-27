@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="220" viewBox="0 0 850 220">
+  <rect width="850" height="220" fill="#0d1117" rx="10" />
+
+  <style>
+    .greeting { font: 600 24px 'Courier New', monospace; fill: #00ff00; }
+    .name { font: bold 52px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+    .bio { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #8b949e; }
+    .highlight { fill: #00ff00; }
+    .neon-glow { filter: drop-shadow(0px 0px 5px rgba(0, 255, 0, 0.6)); }
+  </style>
+
+  <circle cx="30" cy="30" r="7" fill="#ff5f56" />
+  <circle cx="55" cy="30" r="7" fill="#ffbd2e" />
+  <circle cx="80" cy="30" r="7" fill="#27c93f" />
+
+  <text x="30" y="90" class="greeting neon-glow">&gt; INIT SYSTEM... 👋 Welcome!</text>
+  <text x="28" y="150" class="name">I'm Mayank Sethiya</text>
+  
+  <text x="30" y="190" class="bio">
+    🎓 Computer Science Student 
+    <tspan class="highlight"> | </tspan> 💻 MERN Stack &amp; AI 
+    <tspan class="highlight"> | </tspan> 🚀 Building the Future
+  </text>
+</svg>
