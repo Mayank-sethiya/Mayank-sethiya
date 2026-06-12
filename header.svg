@@ -1,41 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="850" height="100" viewBox="0 0 850 100">
-  <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
-    <clipPath id="welcome-clip">
-      <rect x="250" y="0" width="0" height="100">
-        <animate attributeName="width" from="0" to="400" dur="1.5s" begin="0s" fill="freeze" />
-      </rect>
-    </clipPath>
-    
-    <clipPath id="name-clip">
-      <rect x="150" y="0" width="0" height="100">
-        <animate attributeName="width" from="0" to="550" dur="2s" begin="3.5s" fill="freeze" />
-      </rect>
-    </clipPath>
-  </defs>
+  <rect width="100%" height="100%" fill="#0d1117" rx="10" />
 
-  <rect width="100%" height="100%" fill="#0d1117" rx="10" />
+  <g font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#00ff00">
+    
+    <text x="30" y="55">&gt; INIT SYSTEM...</text>
 
-  <g font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#00ff00" filter="url(#glow)">
-    
-    <text x="30" y="55">&gt; INIT SYSTEM...</text>
+    <text x="425" y="55" text-anchor="middle" opacity="1">
+      👋 Welcome!
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.6;1" dur="4s" fill="freeze" />
+    </text>
 
-    <g clip-path="url(#welcome-clip)">
-      <text x="425" y="55" text-anchor="middle">👋 Welcome!</text>
-      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.8;1" dur="3.5s" fill="freeze" />
-    </g>
+    <text x="425" y="55" text-anchor="middle" opacity="0">
+      I'm Mayank Sethiya
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.6;0.7;1" dur="4s" fill="freeze" />
+    </text>
 
-    <g clip-path="url(#name-clip)" opacity="0">
-      <text x="425" y="55" text-anchor="middle">I'm Mayank Sethiya</text>
-      <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.01;1" dur="3.5s" begin="3.49s" fill="freeze" />
-    </g>
-    
-  </g>
+  </g>
 </svg>
