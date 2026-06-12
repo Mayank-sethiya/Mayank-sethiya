@@ -1,24 +1,7 @@
-<svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="850" height="100" viewBox="0 0 850 100">
-  <style>
-    .neon { font-family: 'Courier New', monospace; font-size: 26px; font-weight: bold; fill: #00ff00; }
-    .welcome { animation: fadeOut 4s forwards; }
-    .name { animation: fadeIn 4s forwards; opacity: 0; }
-    
-    @keyframes fadeOut { 
-      0%, 50% { opacity: 1; } 
-      60%, 100% { opacity: 0; } 
-    }
-    @keyframes fadeIn { 
-      0%, 60% { opacity: 0; } 
-      70%, 100% { opacity: 1; } 
-    }
-  </style>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="100" viewBox="0 0 850 100">
   <rect width="100%" height="100%" fill="#0d1117" rx="10" />
-
-  <text x="30" y="55" class="neon">&gt; INIT SYSTEM...</text>
-
-  <text x="425" y="55" text-anchor="middle" class="neon welcome">👋 Welcome!</text>
-
-  <text x="425" y="55" text-anchor="middle" class="neon name">I'm Mayank Sethiya</text>
+  <g font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#00ff00">
+    <text x="30" y="55">&gt; INIT SYSTEM...</text>
+    <text x="425" y="55" text-anchor="middle">I'm Mayank Sethiya</text>
+  </g>
 </svg>
