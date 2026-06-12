@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Mayank-sethiya/Mayank-sethiya/raw/main/header.svg" alt="Mayank Sethiya Profile Header" />
+  <img src="header.gif" alt="Mayank Sethiya Profile Header" />
 </div>
 
 <br/>
